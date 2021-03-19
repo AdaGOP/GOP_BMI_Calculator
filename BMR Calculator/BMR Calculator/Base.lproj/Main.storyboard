@@ -97,6 +97,18 @@
                                     <action selector="lightDarkAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="O4a-mQ-B5w"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u1-88-Ixv">
+                                <rect key="frame" x="32" y="724" width="326" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Calculate!!!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dol-Cj-c6h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -105,6 +117,7 @@
                         <outlet property="bmiStatus" destination="CrY-kp-JJb" id="shp-y8-PL5"/>
                         <outlet property="bmiTitle" destination="g4g-N8-GwG" id="rFL-29-Uri"/>
                         <outlet property="bmiValue" destination="Ub7-tj-0Pd" id="X8r-x3-qDL"/>
+                        <outlet property="calculateButton" destination="3u1-88-Ixv" id="wzC-pM-Jio"/>
                         <outlet property="heightSlider" destination="sFP-Vu-awr" id="7nK-3r-Idk"/>
                         <outlet property="heightTitle" destination="YPg-03-WQA" id="XRs-HZ-Lnd"/>
                         <outlet property="kgLabel" destination="FhR-fV-eVj" id="pBP-nr-mLT"/>

@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     /// Use analogy that explain about the connection outlet of each UI component
     ///
     /// - Important: `Outlet Connection`
-    ///
+    ///`
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var weightTitle: UILabel!
     @IBOutlet weak var heightTitle: UILabel!
@@ -46,6 +46,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var weightSlider: UISlider!
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var lightOrDark: UISegmentedControl!
+    
+    @IBOutlet weak var calculateButton: UIButton!
     
     @IBAction func lightDarkAction(_ sender: UISegmentedControl) {
     if lightOrDark.selectedSegmentIndex == 0 {
@@ -84,7 +86,6 @@ class ViewController: UIViewController {
         
         kgLabel.text = "\(weightBerat) Kg"
                 
-        itIsBMICalculator(yourWeightInKg: weightSlider.value, yourHeightInMeters: heightSlider.value)
     }
     
     @IBAction func slideHeight(_ sender: UISlider) {
@@ -92,9 +93,12 @@ class ViewController: UIViewController {
         
         meterLabel.text = "\(heightTinggi) m"
         
+    }
+    
+    @IBAction func calculateAction(_ sender: UIButton) {
         itIsBMICalculator(yourWeightInKg: weightSlider.value, yourHeightInMeters: heightSlider.value)
     }
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
