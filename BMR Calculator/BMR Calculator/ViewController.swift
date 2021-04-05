@@ -96,7 +96,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateAction(_ sender: UIButton) {
-        itIsBMICalculator(yourWeightInKg: weightSlider.value, yourHeightInMeters: heightSlider.value)
+        calculateMyBMI(yourWeightInKg: weightSlider.value, yourHeightInMeter: heightSlider.value)
     }
     
     override func viewDidLoad() {
@@ -121,13 +121,13 @@ class ViewController: UIViewController {
     ///
     /// - Important: `  TEC057    I can successfully manage Functions in Swift func; Parameters and return value`
     ///
-    func itIsBMICalculator (yourWeightInKg : Float , yourHeightInMeters : Float) {
-       let yourBMI = yourWeightInKg / (yourHeightInMeters*yourHeightInMeters)
-        let resultBounded = String(format: "%.2f", yourBMI)
+    func calculateMyBMI (yourWeightInKg : Float , yourHeightInMeter : Float) {
         
-        bmiValue.text = "\(resultBounded) Kg/m2"
-        
-        
+        let yourBMI = yourWeightInKg / (yourHeightInMeter * yourHeightInMeter)
+        let resultBMI = String(format: "%.2f", yourBMI)
+        bmiValue.text = "\(resultBMI) Kg/m2"
+            
+            
         /// Conditionals Statement
         ///
         /// Explain what is conditional and how it works
